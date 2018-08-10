@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="addPublicationSave" method="post">
+		Publication Name <input name="publicationName" type="text"><br><br>
+		Facluty Name <select name="facultyName" multiple>
+			<option th:each="s : ${data}" th:value="*{s.email}" th:text="*{s.email}"/>
+		</select>
+		<input type="submit">
+	</form>
+	<br>
+</body>
+</html>
